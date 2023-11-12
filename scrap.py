@@ -22,7 +22,7 @@ for url in soup.find_all('url'):
 
 # Store the links in a DataFrame
 data_links = pd.DataFrame({'URL': locs, 'Last Modified Date': dates})
-print(len(data_links))
+#print(len(data_links))
 
 # Prepare the CSV file for saving scraped data
 csv_file = open('guardian_data.csv', 'w', newline='', encoding='utf-8')
@@ -31,7 +31,7 @@ csv_writer.writerow(['Headline', 'Article Body', 'Author Name', 'Date Published'
 
 # Scraping function
 def scrap_data_using_json_schema(pages_df):
-    print("Start The Scraper using JSON Schema | THE GUARDIAN")
+    print("Start The Scrapping | THE GUARDIAN | 300 Articles")
     articles_scraped = 0
     for index, row in pages_df.iterrows(): 
         page = row['URL']
@@ -50,9 +50,8 @@ def scrap_data_using_json_schema(pages_df):
         if articles_scraped == 300:
             break
         
-        print("Scraped: ", articles_scraped)
             
-    return "ok"
+    return "All Articles Scraped"
 
 # Execute scraping
 guardian_news = scrap_data_using_json_schema(data_links)
@@ -63,4 +62,4 @@ csv_file.close()
 
 # Load and print the dataset from CSV
 dataset = pd.read_csv("guardian_data.csv")
-print(dataset)
+#print(dataset)
