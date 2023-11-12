@@ -71,4 +71,4 @@ python all.py
 Contributions are welcome! Please read the contribution guidelines for more information.
 
 ## License
-This project is licensed under the [LICENSE NAME] - see the LICENSE file for details.
+This project is licensed under the Lemesle Maxence - see the LICENSE file for details.
