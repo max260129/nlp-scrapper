@@ -67,8 +67,5 @@ python all.py
 - **Topic Classification**: `topic_classification.py` categorizes the articles into different topics.
 - **Scandal Detection**: `scandal_detection.py` scans for mentions of environmental scandals.
 
-## Contributions
-Contributions are welcome! Please read the contribution guidelines for more information.
-
 ## License
 This project is licensed under the Lemesle Maxence - see the LICENSE file for details.
