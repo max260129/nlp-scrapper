@@ -25,13 +25,15 @@ data_links = pd.DataFrame({'URL': locs, 'Last Modified Date': dates})
 #print(len(data_links))
 
 # Prepare the CSV file for saving scraped data
-csv_file = open('guardian_data.csv', 'w', newline='', encoding='utf-8')
+csv_file = open('./scrapping/guardian_data.csv', 'w', newline='', encoding='utf-8')
 csv_writer = csv.writer(csv_file)
 csv_writer.writerow(['Headline', 'Article Body', 'Author Name', 'Date Published', 'Language', 'Source', 'URL'])
 
+nb = 3
+
 # Scraping function
 def scrap_data_using_json_schema(pages_df):
-    print("Start The Scrapping | THE GUARDIAN | 300 Articles")
+    print("Start The Scrapping | THE GUARDIAN | ", nb, " Articles")
     articles_scraped = 0
     for index, row in pages_df.iterrows(): 
         page = row['URL']
@@ -47,7 +49,7 @@ def scrap_data_using_json_schema(pages_df):
         csv_writer.writerow([headline, article_body, author_name, date_published, language, source, url])
         
         articles_scraped += 1
-        if articles_scraped == 300:
+        if articles_scraped == nb:
             break
         
             
