@@ -49,10 +49,6 @@ nlp-scrapper/
    ```
    git clone [repository URL]
    ```
-2. Install the required Python packages:
-   ```
-   pip install -r requirements.txt
-   ```
 
 ### Usage
 Run the main script to process the news articles:
